@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  product_name: MyString
+  product_type: MyString
+  quantity: 1
+  throwaway: 1
+  price: 
+  price: 
+  branch: MyString
+
+two:
+  product_name: MyString
+  product_type: MyString
+  quantity: 1
+  throwaway: 1
+  price: 
+  price: 
+  branch: MyString

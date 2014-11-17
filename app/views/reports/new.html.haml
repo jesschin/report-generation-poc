@@ -1,0 +1,11 @@
+= simple_form_for @report , :url => reports_path, :html => {:multipart => true}, :method => :post do |f|
+  - if @report.errors.any?
+    #error_explanation
+      %ul
+        - @report.errors.each do |k,v|
+          %h5
+            Row #{k} Errors
+          - v.full_messages.each do |msg|
+            %li= msg
+  = f.input :report_file, :as => :file
+  = f.button :submit

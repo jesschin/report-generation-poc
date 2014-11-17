@@ -1,0 +1,18 @@
+%table.table.table-striped
+  %thead
+    %tr 
+      %td Product Name
+      %td Product Type
+      %td Quantity
+      %td Throwaway
+      %td Price
+      %td Branch
+  %tbody
+    - @products.each do |product|
+      %tr
+        %td #{product.product_name}
+        %td #{product.product_type}
+        %td #{product.quantity}
+        %td #{product.throwaway}
+        %td #{product.price}
+        %td #{product.branch}

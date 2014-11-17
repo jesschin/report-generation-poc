@@ -1,0 +1,38 @@
+/ = stylesheet_link_tag "bootstrap_and_overrides"
+= wicked_pdf_stylesheet_link_tag "bootstrap_and_overrides"
+.container-fluid
+  .row-fluid
+    TRIVISION VENTURES INC.
+    %br
+    Summary of Shortages
+    %br
+    From #{@start_date} to #{@end_date}
+
+  .row-fluid
+    %p
+      Below please find summary of shortages from December 01 to 31 to be checked by the personnel concerned. This is to reconciled on February 10 (Monday) and please be inforned that only documented sales report will be honored. Failure to comply as for specified date will mean accepting the said shortages. Please take note that all shortages will be deducted on February 25 payroll as is (one deduction only) regardless of the amount.
+
+  .row-fluid
+    %table.table.table-bordered
+      %thead
+        %tr
+          %th OUTLET
+          %th SHIFT
+          %th DATE
+          %th NAME
+          %th TOTAL SALES
+          %th CASH REMITTED
+          %th SHORT
+          %th REMARKS
+      %tbody
+        %tr
+          %td #{@entry.outlet.name}
+          %td #{@entry.shift.number}
+          %td #{Date.today}
+          %td #{@entry.user.last_name} #{@entry.user.first_name}
+          %td #{@entry.total_sales}
+          %td #{@entry.cash_remitted}
+          %td #{@entry.short}
+          %td #{@entry.remarks}
+      
+
